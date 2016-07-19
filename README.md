@@ -1,2 +1,2 @@
 # HISAT2
-Hisat alignemnt toll
+Hisat alignemnt tool
