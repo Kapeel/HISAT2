@@ -1,5 +1,5 @@
 FROM ubuntu:14.04.3
-MAINTAINER Eric Lyons
+MAINTAINER Kapeel Chougule
 RUN apt-get update && apt-get install -y \
    build-essential \
    git \
