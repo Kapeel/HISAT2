@@ -16,4 +16,4 @@ RUN git clone "$HISAT2GIT" \
 RUN  make -C $HISAT2PATH \
    && cp $HISAT2PATH/hisat2 $BINPATH \
    && cp $HISAT2PATH/hisat2-* $BINPATH
-ENTRYPOINT ["/usr/bin/hisat2"]
+ENTRYPOINT ["./HISAT2_align.pl"]
