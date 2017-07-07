@@ -95,7 +95,6 @@ my $format = $file_type;
 
 
         if ($format eq 'PE') {
-   my $hisat2p = "/"; 
     my $align_command = "$app $HISAT_ARGS -p 4 -x $name -1 $query_file -2 $second_file | samtools view -bS - > $query_file.bam";
     report("Executing: $align_command\n");
     system $align_command;

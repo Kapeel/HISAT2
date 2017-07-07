@@ -14,8 +14,9 @@ ADD Hisat2_alignment.pl $BINPATH
 WORKDIR $SRCPATH
 RUN git clone "$HISAT2GIT" \
    && cd $HISAT2PATH \
-RUN  make -C $HISAT2PATH \
-   && cp $HISAT2PATH/hisat2 $BINPATH \
-   && cp $HISAT2PATH/hisat2-* $BINPATH \
-   && cp $HISAT2PATH/extract_* $BINPATH
+RUN  make -C $HISAT2PATH
+#   && cp $HISAT2PATH/hisat2 $BINPATH \
+#   && cp $HISAT2PATH/hisat2-* $BINPATH \
+#   && cp $HISAT2PATH/extract_* $BINPATH
+ENV PATH "/hisat2:$PATH"
 ENTRYPOINT ["Hisat2_alignment.pl"]
