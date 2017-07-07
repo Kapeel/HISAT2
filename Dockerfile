@@ -9,11 +9,11 @@ ENV SRCPATH /usr/src
 ENV HISAT2GIT https://github.com/infphilo/hisat2.git
 ENV HISAT2PATH $SRCPATH/hisat2
 RUN mkdir -p $SRCPATH
-ADD Hisat2_align.pl $BINPATH
+ADD Hisat2_alignment.pl $BINPATH
 WORKDIR $SRCPATH
 RUN git clone "$HISAT2GIT" \
    && cd $HISAT2PATH \
 RUN  make -C $HISAT2PATH \
    && cp $HISAT2PATH/hisat2 $BINPATH \
    && cp $HISAT2PATH/hisat2-* $BINPATH
-ENTRYPOINT ["Hisat2_align.pl"]
+ENTRYPOINT ["Hisat2_alignment.pl"]
