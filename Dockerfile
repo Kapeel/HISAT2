@@ -18,5 +18,5 @@ RUN  make -C $HISAT2PATH
 #   && cp $HISAT2PATH/hisat2 $BINPATH \
 #   && cp $HISAT2PATH/hisat2-* $BINPATH \
 #   && cp $HISAT2PATH/extract_* $BINPATH
-ENV PATH "/hisat2:$PATH"
+ENV PATH "/usr/src/hisat2:$PATH"
 ENTRYPOINT ["Hisat2_alignment.pl"]
