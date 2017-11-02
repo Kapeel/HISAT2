@@ -68,7 +68,7 @@ if ($user_database_path) {
     my $success = undef;
     system "mkdir output";
 
-    my $app  = "/usr/bin/hisat2";
+    my $app  = "hisat2";
     my $format = $file_type;
 
     chomp(my $basename = `basename $query_file`);
